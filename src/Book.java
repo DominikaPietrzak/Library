@@ -5,4 +5,11 @@ public class Book extends Literature{
 
     int volumeNumber;
 
+    public int getVolumeNumber(){
+        return volumeNumber;
+    }
+
+    public void setVolumeNumber(int volumeNumber){
+        this.volumeNumber = volumeNumber;
+    }
 }
