@@ -3,19 +3,21 @@
  */
 public class Literature {
 
-
     private String title;
-    private String author1;
+    private String author1; // zmienić na authors w tablicy
     private String author2;
     private boolean readed;
     private boolean toread;
     private String type; // for example horror fictional
+    private int numberOfPages;
+    private int lastPage;
 
-    public String getTitle(){
+
+    public String getTitle() {
         return title;
     }
 
-    public String  getAuthor1(){ return author1; }
+    public String  getAuthor1() { return author1; }
 
     public String getAuthor2(){
         return author2;
@@ -30,6 +32,11 @@ public class Literature {
     }
 
     public String getType() { return type; }
+
+    public int getNumberOfPages() {return numberOfPages;}
+
+    public int getLastPage() {return lastPage;}
+
 
     public void setTitle(String title) {
         this.title = title;
@@ -49,4 +56,6 @@ public class Literature {
     public void setType(String type){
         this.type = type;
     }
-}
+    public void setNumberOfPages(int numberOfPages){ this.numberOfPages = numberOfPages;}
+    public void setLastPage(int lastPage){this.lastPage = lastPage;}
+
