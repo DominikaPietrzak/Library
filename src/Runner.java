@@ -4,7 +4,28 @@ public class Runner{
 
     public static void main(String[] args){
 
-        String whatToDo;
+        String bookTitle;
+        String[] authors1 = new String[1];
+        authors1[0] = "Bułhakow";
+        Book book1 = new Book("Mistrz i Małgorzata", authors1, false, true, "fantastyka", 502, 302, 1 );
+        System.out.println(book1.getTitle());
+
+        System.out.println("Podaj tytuł książki");
+        Scanner readOut = new Scanner(System.in);
+        bookTitle = readOut.nextLine();
+        Book book2 = new Book();
+        book2.setTitle(bookTitle);
+        System.out.println(book2.getTitle());
+
+
+
+
+
+
+
+
+
+       /* String whatToDo;
 
         System.out.println(" Witaj użytkowniku aby :");
         System.out.println(" - wyświetlić spis ksiażek alfabetycznie według autora - wpisz - author ");
@@ -15,9 +36,9 @@ public class Runner{
 
         Scanner readOut = new Scanner(System.in);
         whatToDo = readOut.nextLine();
-
-        while(whatToDo != "exit" ) {
-            whatToDo = readOut.nextLine(); /* TODO add while loop if someone will write bad content like dds despite of for example author */
+*/
+        /* while(whatToDo != "exit" ) {
+            whatToDo = readOut.nextLine(); // TODO add while loop if someone will write bad content like dds despite of for example author
 
             switch (whatToDo) {
                 case "author":
@@ -42,7 +63,7 @@ public class Runner{
                     // TODO program end when somebody whrite wrong whatToDo. Programm should take another word
 
             }
-        }
+        } */
 
 
 
