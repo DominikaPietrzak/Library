@@ -8,7 +8,12 @@ public class Magazine extends Literature{
     int publicationMonth;
 
 
-    public Magazine(){}
+    public Magazine(String title, String author, boolean readed, boolean toread, String type, int numberOfPages, int lastPage, int number, int publicationYear,int publicationMonth){
+        super(title, author, readed, toread, type, numberOfPages,  lastPage);
+        this.number = number;
+        this.publicationYear = publicationYear;
+        this.publicationMonth = publicationMonth;
+    }
 
 
     public int getNumber(){

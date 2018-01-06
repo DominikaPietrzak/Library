@@ -15,8 +15,8 @@ public class Book extends Literature{
     }
 
 
-    public Book(String title, String[] authors, boolean readed, boolean toread, String type, int numberOfPages, int lastPage, int volumeNumber) {
-        super( title, authors, readed, toread, type, numberOfPages, lastPage);
+    public Book(String title, String author, boolean readed, boolean toread, String type, int numberOfPages, int lastPage, int volumeNumber) {
+        super( title, author, readed, toread, type, numberOfPages, lastPage);
         this.volumeNumber = volumeNumber;
        // System.out.println("Podaj imię autora");
        // Scanner in = new Scanner(System.in);

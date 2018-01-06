@@ -4,17 +4,17 @@
 public abstract class Literature {
 
     private String title;
-    private String[] authors; // zmienić na authors w tablica
+    private String author; //
     private boolean readed;
     private boolean toread;
     private String type; // for example horror fictional
     private int numberOfPages;
     private int lastPage;
 
-    public Literature(String title, String[] authors, boolean readed, boolean toread, String type, int numberOfPages, int lastPage ){
+    public Literature(String title, String author, boolean readed, boolean toread, String type, int numberOfPages, int lastPage ){
 
         this.title = title;
-        this.authors = authors;
+        this.author = author;
         this.readed = readed;
         this.toread = toread;
         this.type = type;
@@ -51,6 +51,9 @@ public abstract class Literature {
         return lastPage;
     }
 
+    public String getAuthor() { return author; }
+
+    public void setAuthor(String author) { this.author = author; }
 
     public void setTitle(String title) {
         this.title = title;
