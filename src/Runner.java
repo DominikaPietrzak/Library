@@ -5,15 +5,42 @@ public class Runner{
     public static void main(String[] args){
 
         String bookTitle;
-        Book book1 = new Book("Mistrz i Małgorzata", "Bułhakow", false, true, "fantastyka", 502, 302, 1 );
-        System.out.println(book1.getTitle());
-
-        //System.out.println("Podaj rodzaj literatury (książka - wpisz - k, gazeta/magazyn - wpisz - g");
-
-        System.out.println("Podaj tytuł książki");
-        Scanner readOut = new Scanner(System.in);
-        bookTitle = readOut.nextLine();
+        //Book book1 = new Book("Mistrz i Małgorzata", "Bułhakow", false, true, "fantastyka", 502, 302, 1 );
+        //System.out.println(book1.getTitle());
         Book book2 = new Book();
+
+        System.out.println("Podaj rodzaj literatury (książka - wpisz - k, gazeta/magazyn - wpisz - g");
+        String literatureType;
+        Scanner readOut = new Scanner(System.in);
+        literatureType = readOut.nextLine();
+        String literature;
+        Object literatureObj;
+        // TODO: zrobić tak, żeby w zależnośći od tego czy wybierze się książkę czy gazetę tworzyło obiekt typu book lub magazine
+        do{
+            if(literatureType.equals("k")){
+                literatureType = "ksiażka";
+                literature = "k";
+                Book book3 = new Book();
+                literatureObj = book3;
+            }
+            else if(literatureType.equals("g")){
+                literatureType = "gazeta";
+                literature = "g";
+                Magazine magazine1 = new Magazine();
+                literatureObj = magazine1;
+            }
+        while(!literatureType.equals("k") && !literatureType.equals("g"));
+
+         if(literature.equals("g")){
+            System.out.println("Podaj tytuł gazety");
+         }
+         else if(literature.equals("k")){
+            System.out.println("Podaj tytuł ksiażki");
+         }
+
+
+        bookTitle = readOut.nextLine();
+
         book2.setTitle(bookTitle);
         System.out.println(book2.getTitle());
 
