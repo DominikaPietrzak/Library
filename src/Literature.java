@@ -5,18 +5,18 @@ public abstract class Literature {
 
     private String title;
     private String author; //
-    private boolean readed;
-    private boolean toread;
+    private boolean read;
+    private boolean toRead;
     private String type; // for example horror fictional
     private int numberOfPages;
     private int lastPage;
 
-    public Literature(String title, String author, boolean readed, boolean toread, String type, int numberOfPages, int lastPage ){
+    public Literature(String title, String author, boolean read, boolean toRead, String type, int numberOfPages, int lastPage ){
 
         this.title = title;
         this.author = author;
-        this.readed = readed;
-        this.toread = toread;
+        this.read = read;
+        this.toRead = toRead;
         this.type = type;
         this.numberOfPages =numberOfPages;
         this.lastPage = lastPage;
@@ -31,12 +31,10 @@ public abstract class Literature {
         return title;
     }
 
-    public boolean getReaded() {
-        return readed;
-    }
+    public boolean getRead() { return read; }
 
-    public boolean getToread() {
-        return toread;
+    public boolean getToRead() {
+        return toRead;
     }
 
     public String getType() {
@@ -59,12 +57,12 @@ public abstract class Literature {
         this.title = title;
     }
 
-    public void setReaded(boolean readed) {
-        this.readed = readed;
+    public void setRead(boolean read) {
+        this.read = read;
     }
 
-    public void setToread(boolean toread) {
-        this.toread = toread;
+    public void setToRead(boolean toRead) {
+        this.toRead = toRead;
     }
 
     public void setType(String type) {
