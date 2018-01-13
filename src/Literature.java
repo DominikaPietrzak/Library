@@ -1,8 +1,10 @@
+import java.util.LinkedList;
+
 /**
  * Created by dominika on 12.11.17.
  */
 public abstract class Literature {
-
+    private LinkedList<Literature> literature = new LinkedList<Literature>();
     private String title;
     private String author; //
     private boolean read;
@@ -26,6 +28,7 @@ public abstract class Literature {
     public Literature() {
 
     }
+    public LinkedList<Literature> getLiterature(){return literature;}
 
     public String getTitle() {
         return title;
@@ -76,4 +79,6 @@ public abstract class Literature {
     public void setLastPage(int lastPage) {
         this.lastPage = lastPage;
     }
+
+    public void setLiterature(LinkedList<Literature> literature){ this.literature = literature;}
 }
