@@ -135,6 +135,9 @@ public class Magazine extends Literature{
         for(int i=0; i< magazines.size();i++){
             System.out.println(magazines.get(i).getAuthor());
             System.out.println(magazines.get(i).getTitle());
+            System.out.println(magazines.get(i).getType());
+            System.out.println(magazines.get(i).getPublicationMonth());
+            System.out.println(magazines.get(i).getPublicationMonth());
 
         }
     }
