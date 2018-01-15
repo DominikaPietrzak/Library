@@ -57,7 +57,7 @@ public class Book extends Literature{
                 read = false;
                 book.setRead(read);
             } else {
-                System.out.println("Wpisz poprawny wyraz1");
+                System.out.println("Wpisz poprawny wyraz");
                 readString = readOut.nextLine();
             }
         }while(!readString.equals("tak") && !readString.equals("nie"));
@@ -80,7 +80,7 @@ public class Book extends Literature{
             }
         }while( !toReadString.equals("tak") && !toReadString.equals("nie") );
 
-        System.out.println("Podaj kategorię czasopisma");
+        System.out.println("Podaj kategorię ksiażki");
         String type;
         type = readOut.nextLine();
         book.setType(type);
@@ -100,7 +100,7 @@ public class Book extends Literature{
         volumeNumber = readOut.nextInt();
         //book.setVolumeNumber(volumeNumber);
 
-        LinkedList<Book> books = new LinkedList<Book>();
+        //LinkedList<Book> books = new LinkedList<Book>();
         this.books.add(new Book(title, author,book.getToRead(),book.getRead() ,type,numberOfPages,lastPage, volumeNumber));
 
 
@@ -114,5 +114,45 @@ public class Book extends Literature{
             System.out.println(books.get(i).getTitle());
 
         }
+    }
+
+    public void readAllAuthors(LinkedList<Book> books){
+        for(int i=0; i<books.size();i++ ){
+            System.out.println(books.get(i).getAuthor());
+        }
+    }
+
+    public void readAllBooksToRead(LinkedList<Book> books){
+        for(int i=0; i<books.size();i++ ){
+            if(books.get(i).getToRead() == true){
+                System.out.println(books.get(i).getTitle());
+                System.out.println(books.get(i).getAuthor());
+            }
+            else{
+                System.out.println("Nie ma książek do przeczytania");
+            }
+
+        }
+    }
+
+    public void readAllBooksRead(LinkedList<Book> books){
+        for(int i=0; i<books.size();i++ ){
+            if(books.get(i).getRead() == true){
+                System.out.println(books.get(i).getTitle());
+                System.out.println(books.get(i).getAuthor());
+            }
+        }
+    }
+    public void readAllBooksCategories(LinkedList<Book> books){
+        for(int i=0; i<books.size(); i++){
+            System.out.println(books.get(i).getType());
+        }
+    }
+
+    public int howManyPagesLeft(int numberOfPages, int lastPage){
+
+        int pageLeft = numberOfPages - lastPage;
+        return pageLeft;
+    }
 }
-}
+

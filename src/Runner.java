@@ -12,8 +12,10 @@ public class Runner{
         Book books = new Book();
 
         books.addBook();
-
-        books.readAllBooks(books.getAllBooks());
+        LinkedList<Book> getBooks = books.getAllBooks();
+        books.readAllBooks(getBooks);
+        books.readAllAuthors(getBooks);
+        books.readAllBooksToRead(getBooks);
         /*
         System.out.println("Podaj rodzaj literatury: \nksiążka - wpisz - k \ngazeta/magazyn - wpisz - g");
         String literatureType;
@@ -57,7 +59,7 @@ public class Runner{
         //Todo: tworzenie nowych obiektów
 
 
-        LinkedList<Book> books = new LinkedList<Book>();
+
 
 
 
