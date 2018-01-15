@@ -108,6 +108,11 @@ public class Magazine extends Literature{
         lastPage = readOut.nextInt();
         magazine.setLastPage(lastPage);
 
+        System.out.println("Podaj numer magazynu");
+        int number;
+        number = readOut.nextInt();
+        magazine.setNumber(number);
+
         System.out.println("Podaj rok publikacji");
         int publicationYear;
         publicationYear = readOut.nextInt();
@@ -118,8 +123,8 @@ public class Magazine extends Literature{
         publicationMonth = readOut.nextInt();
         magazine.setPublicationMonth(publicationMonth);
 
-        LinkedList<Book> books = new LinkedList<Book>();
-        this.magazines.add(new Book(title, author,magazine.getToRead(),magazine.getRead() ,type,numberOfPages,lastPage, volumeNumber));
+        //LinkedList<Book> books = new LinkedList<Book>();
+        this.magazines.add(new Magazine(title, author,magazine.getToRead(),magazine.getRead() ,type,numberOfPages,lastPage,number,publicationYear, publicationMonth));
 
 
     }
