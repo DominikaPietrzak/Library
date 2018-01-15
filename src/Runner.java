@@ -3,7 +3,7 @@ import java.util.LinkedList;
 
 //TODO: make sorting by alphabet
 public class Runner{
-
+private String literatureType;
     public static void main(String[] args){
 
         //Book book1 = new Book("Mistrz i Małgorzata", "Bułhakow", false, true, "fantastyka", 502, 302, 1 );
@@ -15,25 +15,19 @@ public class Runner{
         magazines.readAllMagazines(getMagazines);
     */
 
-
+        Runner runner = new Runner();
         System.out.println("Podaj rodzaj literatury: \nksiążka - wpisz - k \ngazeta/magazyn - wpisz - g");
         String literatureType;
         Scanner readOut = new Scanner(System.in);
         literatureType = readOut.nextLine();
-        String literature;
+        runner.setLiteratureType(literatureType);
+        //do{
 
-        do {
-            if (literatureType.equals("k")) {
-                literature = "książki";
-            }else if (literatureType.equals("g")) {
-                literature = " gazety/magazynu";
-            }else {
-                System.out.println("Zły znak. Wpisz poprawny znak");
-                literatureType = readOut.nextLine();
-                literature = "";
-            }
-        }
-        while(!literatureType.equals("k") && !literatureType.equals("g"));
+            //literatureType = readOut.nextLine();
+           // runner.setLiteratureType(literatureType);
+        //}
+
+        //while(!literatureType.equals("k") && !literatureType.equals("g"));
 
         // objects to access
 
@@ -42,7 +36,7 @@ public class Runner{
         Book books = new Book();
         LinkedList<Book> getBooks = books.getAllBooks();
 
-        if (literatureType == "k") {
+        if (runner.getLiteratureType().equals("k")) {
             String whatToDo;
 
             System.out.println(" Witaj użytkowniku aby :");
@@ -65,6 +59,7 @@ public class Runner{
                         break;
                     case "title":
                         System.out.println("Tytuły ksiażek"); //TODO when somebody write title, list of titles must be shown
+                        books.readAllBooksTitle(getBooks);
                         break;
                     case "toread":
                         System.out.println("Książki do przeczytania"); //TODO when somebody write toread, list of books to read must be shown
@@ -87,7 +82,7 @@ public class Runner{
                 }
             }
             // FOR MAGAZINE
-        }else if(literatureType == "g"){
+        }else if(runner.getLiteratureType().equals("g")){
 
             System.out.println(" Witaj użytkowniku aby :");
             System.out.println(" - wyświetlić spis magazynów alfabetycznie według autora - wpisz - author ");
@@ -135,4 +130,8 @@ public class Runner{
         }
 
     }
+    public void setLiteratureType(String literatureType){
+        this.literatureType = literatureType;}
+
+    public String getLiteratureType(){ return literatureType;}
 }

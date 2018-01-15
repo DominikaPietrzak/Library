@@ -154,5 +154,11 @@ public class Book extends Literature{
         int pageLeft = numberOfPages - lastPage;
         return pageLeft;
     }
+
+    public void readAllBooksTitle(LinkedList<Book> books){
+        for(int i=0; i<books.size(); i++){
+            System.out.println(books.get(i).getAuthor());
+        }
+    }
 }
 
