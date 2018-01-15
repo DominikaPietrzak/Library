@@ -126,6 +126,58 @@ public class Magazine extends Literature{
         //LinkedList<Book> books = new LinkedList<Book>();
         this.magazines.add(new Magazine(title, author,magazine.getToRead(),magazine.getRead() ,type,numberOfPages,lastPage,number,publicationYear, publicationMonth));
 
+    }
 
+    public LinkedList<Magazine>  getAllMagazines(){ return magazines;}
+
+    public   void readAllMagazines (LinkedList<Magazine> magazines){ //LinkedList<Book> books
+
+        for(int i=0; i< magazines.size();i++){
+            System.out.println(magazines.get(i).getAuthor());
+            System.out.println(magazines.get(i).getTitle());
+
+        }
+    }
+
+    public void readAllAuthors(LinkedList<Magazine> magazines){
+        for(int i=0; i<magazines.size();i++ ){
+            System.out.println(magazines.get(i).getAuthor());
+        }
+    }
+
+    public void readAllMagazinesToRead(LinkedList<Magazine> magazines){
+        for(int i=0; i<magazines.size();i++ ){
+            if(magazines.get(i).getToRead() == true){
+                System.out.println(magazines.get(i).getTitle());
+                System.out.println(magazines.get(i).getAuthor());
+            }
+            else{
+                System.out.println("Nie ma książek do przeczytania");
+            }
+
+        }
+    }
+
+    public void readAllMagazinesReadTrue(LinkedList<Magazine> magazines){
+        for(int i=0; i<magazines.size();i++ ){
+            if(magazines.get(i).getRead() == true){
+                System.out.println(magazines.get(i).getTitle());
+                System.out.println(magazines.get(i).getAuthor());
+            }
+        }
+    }
+
+    public void readAllMagazinesFalse(LinkedList<Magazine> magazines){
+        for(int i=0;i<magazines.size();i++){
+            if(magazines.get(i).getRead() == false){
+                System.out.println(magazines.get(i).getTitle());
+                System.out.println(magazines.get(i).getAuthor());
+            }
+        }
+    }
+    public void readAllMagazinesCategories(LinkedList<Magazine> magazines){
+        for(int i=0; i<magazines.size(); i++){
+            System.out.println(magazines.get(i).getType());
+        }
     }
 }

@@ -8,14 +8,19 @@ public class Runner{
         //Book book1 = new Book("Mistrz i Małgorzata", "Bułhakow", false, true, "fantastyka", 502, 302, 1 );
         //System.out.println(book1.getTitle());
 
-
+        Magazine magazines = new Magazine();
         Book books = new Book();
 
         books.addBook();
         LinkedList<Book> getBooks = books.getAllBooks();
         books.readAllBooks(getBooks);
-        books.readAllAuthors(getBooks);
-        books.readAllBooksToRead(getBooks);
+       // books.readAllAuthors(getBooks);
+       // books.readAllBooksToRead(getBooks);
+        magazines.addMagazine();
+        LinkedList<Magazine> getMagazines = magazines.getAllMagazines();
+        magazines.readAllMagazines(getMagazines);
+
+
         /*
         System.out.println("Podaj rodzaj literatury: \nksiążka - wpisz - k \ngazeta/magazyn - wpisz - g");
         String literatureType;
